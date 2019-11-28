@@ -3,43 +3,55 @@
 
 <head>
   <meta charset="utf-8">
-   <link href="https://fonts.googleapis.com/css?family=Rubik:300,500&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Nunito:300,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/master.css">
   <title></title>
 </head>
 
 <body>
+  <script src="script.js"></script>
   <div class="backgroundImg"></div>
+
+  <p id="screenWidth"></p>
+
   <nav class="navigation">
     <ul class="navContainer">
-      <a href="#"><li><span class="navText">Home</span></li></a>
-      <a href="#"><li><span class="navText">Projects</span></li></a>
+      <a href="#">
+        <li><span class="navText">Home</span></li>
+      </a>
+      <a href="#">
+        <li><span class="navText">Projects</span></li>
+      </a>
       <li>
-          <div class="logoContainer">
-            <svg id="Logo" viewbox="-59 -52 1133.56 1000">
-              <title>Logo</title>
-              <defs>
-                <filter id="dropshadow" height="130%">
-                  <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
-                  <feGaussianBlur in="matrixOut" stdDeviation="10" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="1" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
-              </defs>
-              <path id="LogoPath" filter="url(#dropshadow)"
-                d="M994,21V146A119.73,119.73,0,0,0,874.37,265.59a243,243,0,0,1-71.61,173q-4.69,4.69-9.6,9.11,4.9,4.41,9.6,9.11a243,243,0,0,1,71.61,173A119.73,119.73,0,0,0,994,749.37v125A244.49,244.49,0,0,1,749.37,629.78,119.73,119.73,0,0,0,629.78,510.19v-125a119.6,119.6,0,1,0-119.59-119.6V629.78a244.64,244.64,0,0,1-417.58,173,244.73,244.73,0,0,1,0-346q4.69-4.71,9.6-9.11-4.9-4.41-9.6-9.11a244.64,244.64,0,0,1,346-346c3.13,3.13,6.16,6.35,9.11,9.62,2.94-3.27,6-6.49,9.1-9.62a244.74,244.74,0,0,1,346,0c3.14,3.13,6.17,6.35,9.11,9.62,2.94-3.27,6-6.49,9.11-9.62A243,243,0,0,1,994,21M265.59,749.37a119.73,119.73,0,0,0,119.6-119.59V265.59a119.6,119.6,0,1,0-119.6,119.6v125a119.59,119.59,0,1,0,0,239.18M994,0A263.79,263.79,0,0,0,811.87,72.19a265.74,265.74,0,0,0-364.18,0,265.64,265.64,0,0,0-375.5,375.5,265.59,265.59,0,0,0,193.4,447.68,265.49,265.49,0,0,0,265.6-265.59V265.59a98.59,98.59,0,1,1,98.59,98.6,21,21,0,0,0-21,21v125a21,21,0,0,0,21,21,98.7,98.7,0,0,1,98.59,98.59A265.49,265.49,0,0,0,994,895.37a21,21,0,0,0,21-21v-125a21,21,0,0,0-21-21,98.71,98.71,0,0,1-98.59-98.59,263.78,263.78,0,0,0-72.18-182.09,263.79,263.79,0,0,0,72.18-182.1A98.71,98.71,0,0,1,994,167a21,21,0,0,0,21-21V21A21,21,0,0,0,994,0ZM265.59,728.37a98.59,98.59,0,0,1,0-197.18,21,21,0,0,0,21-21v-125a21,21,0,0,0-21-21,98.6,98.6,0,1,1,98.6-98.6V629.78a98.71,98.71,0,0,1-98.6,98.59Z" />
-            </svg>
-          </div>
-        </li>
-        <a href="#"><li><span class="navText">Contact</span></li></a>
-        <a href="#"><li><span class="navText">About</span></li></a>
+        <div class="logoContainer">
+          <svg id="Logo" viewbox="-59 -52 1133.56 1000">
+            <title>Logo</title>
+            <defs>
+              <filter id="dropshadow" height="130%">
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                <feGaussianBlur in="matrixOut" stdDeviation="10" /> <!-- stdDeviation is how much to blur -->
+                <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="1" /> <!-- slope is the opacity of the shadow -->
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode /> <!-- this contains the offset blurred image -->
+                  <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
+                </feMerge>
+              </filter>
+            </defs>
+            <path id="LogoPath" filter="url(#dropshadow)"
+              d="M994,21V146A119.73,119.73,0,0,0,874.37,265.59a243,243,0,0,1-71.61,173q-4.69,4.69-9.6,9.11,4.9,4.41,9.6,9.11a243,243,0,0,1,71.61,173A119.73,119.73,0,0,0,994,749.37v125A244.49,244.49,0,0,1,749.37,629.78,119.73,119.73,0,0,0,629.78,510.19v-125a119.6,119.6,0,1,0-119.59-119.6V629.78a244.64,244.64,0,0,1-417.58,173,244.73,244.73,0,0,1,0-346q4.69-4.71,9.6-9.11-4.9-4.41-9.6-9.11a244.64,244.64,0,0,1,346-346c3.13,3.13,6.16,6.35,9.11,9.62,2.94-3.27,6-6.49,9.1-9.62a244.74,244.74,0,0,1,346,0c3.14,3.13,6.17,6.35,9.11,9.62,2.94-3.27,6-6.49,9.11-9.62A243,243,0,0,1,994,21M265.59,749.37a119.73,119.73,0,0,0,119.6-119.59V265.59a119.6,119.6,0,1,0-119.6,119.6v125a119.59,119.59,0,1,0,0,239.18M994,0A263.79,263.79,0,0,0,811.87,72.19a265.74,265.74,0,0,0-364.18,0,265.64,265.64,0,0,0-375.5,375.5,265.59,265.59,0,0,0,193.4,447.68,265.49,265.49,0,0,0,265.6-265.59V265.59a98.59,98.59,0,1,1,98.59,98.6,21,21,0,0,0-21,21v125a21,21,0,0,0,21,21,98.7,98.7,0,0,1,98.59,98.59A265.49,265.49,0,0,0,994,895.37a21,21,0,0,0,21-21v-125a21,21,0,0,0-21-21,98.71,98.71,0,0,1-98.59-98.59,263.78,263.78,0,0,0-72.18-182.09,263.79,263.79,0,0,0,72.18-182.1A98.71,98.71,0,0,1,994,167a21,21,0,0,0,21-21V21A21,21,0,0,0,994,0ZM265.59,728.37a98.59,98.59,0,0,1,0-197.18,21,21,0,0,0,21-21v-125a21,21,0,0,0-21-21,98.6,98.6,0,1,1,98.6-98.6V629.78a98.71,98.71,0,0,1-98.6,98.59Z" />
+          </svg>
+        </div>
+      </li>
+      <a href="#">
+        <li><span class="navText">Contact</span></li>
+      </a>
+      <a href="#">
+        <li><span class="navText">About</span></li>
+      </a>
     </ul>
   </nav>
 </body>
