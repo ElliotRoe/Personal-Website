@@ -38,8 +38,8 @@ li {
   text-align: center;
 
   border-width: 0px;
-  border-style: solid;
-  border-color: #f2e9d8;
+  border-style: double;
+  border-color: rgba(255, 0, 0, 0);
   border-radius: 50%;
 
   font-family: 'Nunito', sans-serif;
@@ -54,13 +54,16 @@ li {
 
 li:hover {
   border-width: 10px;
-  -webkit-box-shadow: 0px 0px 29px -5px rgba(242,233,216,0.35);
-  box-shadow: 0px 0px 29px -5px rgba(242,233,216,0.35);
+  border-color: #f2e9d8;
+  -webkit-box-shadow: 0px 0px 29px -5px rgba(242,233,216,0.2);
+  box-shadow: 0px 0px 29px -5px rgba(242,233,216,0.2);
   margin-bottom: 20px;
 }
 
 li:active {
   margin-bottom: 10px;
+  border-style: solid;
+
 }
 
 
