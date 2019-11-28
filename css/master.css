@@ -13,60 +13,101 @@ body {
   background-color: #261D1B;
 }
 
+a {
+  animation-name: hoverAnim;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+  text-decoration: none;
+
+  color: #f2e9d8;
+}
+
+a:hover {
+  animation-play-state: running;
+
+  text-shadow: 0 0 5px #f2e9d8;
+}
+
+@keyframes hoverAnim {
+  from {
+    text-shadow: 0 0 0px #f2e9d8;
+  }
+
+  to {
+    text-shadow: 0 0 5px #f2e9d8;
+  }
+}
+
+li {
+  flex-basis: 0;
+  padding: 0;
+
+  margin: auto;
+  margin-right: 1%;
+  margin-left: 1%;
+
+  min-width: 200px;
+  max-width: 200px;
+  height: 200px;
+
+  text-align: center;
+
+  //border-radius: 50%;
+  background-color: cyan;
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 35px;
+}
+
+li:nth-child(3) {
+  width:auto;
+  padding: 0;
+  min-width: auto;
+  max-width: inherit;
+  height: auto;
+}
+
+.navigation {
+  margin: 28vh 15%;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  list-style-type: none;
+
+}
+
 .backgroundImg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height:100vh;
+  margin: 0;
+
   background-image: -moz-linear-gradient( 90deg, rgba(21,17,18,0.6) 0%, rgba(0,0,0,0) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgba(21,17,18,0.6) 0%, rgba(0,0,0,0) 100%);
   background-image: -ms-linear-gradient( 90deg, rgba(21,17,18,0.6) 0%, rgba(0,0,0,0) 100%);
   box-shadow: inset 0px 3px 250px 0px rgba(0, 0, 0, 0.32);
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  margin: 0;
-  width: 100%;
-  height:100vh;
-  z-index: -1;
 }
 
 #LogoPath {
-  fill: #f2e9d8;
+  fill: #f2e9d8
+}
+
+#Logo path{
 }
 
 .logoContainer {
-
-  max-width: 500px;
-  width: 70%;
-
+  width: 450px;
   margin: auto;
-  margin-top: 25vh;
-}
 
-@keyframes example {
-  from {
-    background-color: #F20732;
-  }
+  //background-color: blue;
 
-  to {
-    background-color: #056CF2;
-  }
-
-
-}
-
-.elliot {
-  width: auto;
-  height: 10%;
-
-  animation-name: example;
-  animation-duration: 1s;
-  animation-play-state: paused;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  text-align: center;
-
-  background-color: green;
-  box-shadow: inset 0px 0px 100px rgba(0,0,0,0.3);
-}
-
-.elliot:hover {
-  animation-play-state: running;
 }
